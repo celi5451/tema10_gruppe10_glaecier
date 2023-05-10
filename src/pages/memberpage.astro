@@ -1,0 +1,69 @@
+---
+import Mainlayout from "../layouts/Mainlayout.astro";
+import "../styles.css";
+const { title } = Astro.props;
+---
+
+<Mainlayout title="glaecier">
+  <div class="flex">
+    <img src="img/glaecier_logo.svg" alt="logo" />
+    <h1>Member</h1>
+  </div>
+  <div class="text_columns">
+    <div class="col2_text">
+      <p>Welcome to Glaecier’s exclusive member site</p>
+      <p>Access our event calendar, insider facility tips, and practical messages. Be a part of the Glaecier community.</p>
+    </div>
+  </div>
+  <section class="memberpage_box">
+    <h2>Join us in building a thriving community together</h2>
+    <p>Our members are the heart of our community.</p>
+    <p>
+      Join us in building a thriving and vibrant space where everyone can unwind, relax and connect with like-minded people. We believe in creating a welcoming and inclusive environment that fosters growth, wellness, and fun. So come join us and be
+      part of something special. Together, let's build a thriving community that celebrates the power of sauna and relaxation.
+    </p>
+  </section>
+</Mainlayout>
+
+<style>
+  body {
+    width: 100%;
+    height: 1500px;
+    background-image: url("../img/memberpage.webp");
+    background-size: cover;
+    background-position: center;
+    background-origin: top;
+    max-height: 800px;
+  }
+  img {
+    width: 200px;
+  }
+  .flex {
+    display: flex;
+    margin-left: 60%;
+    margin-top: 30%;
+    color: var(--white);
+  }
+  .flex h1 {
+    margin: 1rem;
+    font-size: var(--h1-font-size);
+  }
+  .text_columns {
+    background-color: var(--orange-beige);
+    padding: 5%;
+  }
+  .memberpage_box {
+    background-color: var(--background);
+    color: var(--dark);
+    text-align: center;
+    padding: 10%;
+  }
+  .memberpage_box p {
+    font-size: var(--p-font-size);
+    margin-top: 2rem;
+  }
+  .mercmemberpage_boxhandise h2 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+  }
+</style>

@@ -11,6 +11,7 @@
   --background: #e0dbd1;
   --dark-background: #b1a48d;
   --blue: #badae8;
+  --orange-beige: #d9a87e;
   --hover: ;
 }
 * {
@@ -21,10 +22,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
-}
-
-a {
-  font-family: ;
 }
 
 img {

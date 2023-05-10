@@ -1,0 +1,32 @@
+---
+import "../styles.css";
+---
+
+<button class="rectangular-button"><a href="/">Sign up</a></button>
+
+<style>
+  .rectangular-button {
+    background-color: transparent;
+    color: varvar(--white);
+    border: 1px solid var(--white);
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+  }
+  .rectangular-button:hover {
+    background-color: var(--white);
+    color: var(--background-color);
+    cursor: pointer;
+  }
+  .rectangular-button a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  .rectangular-button a:hover {
+    color: var(--dark);
+  }
+</style>

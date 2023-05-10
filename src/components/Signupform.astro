@@ -4,30 +4,48 @@ import Button2 from "../components/Button2.astro";
 
 <form id="signup-form">
   <div>
-    <label for="name">Name:</label>
-    <input type="text" name="name" required />
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+    </div>
+    <div>
+      <label for="surname">Surname:</label>
+      <input type="text" name="surname" required />
+    </div>
+    <div>
+      <label for="address">Address:</label>
+      <input type="text" name="address" required />
+    </div>
+    <div>
+      <label for="mail">Mail:</label>
+      <input type="email" name="mail" required />
+    </div>
+    <div>
+      <label for="phone">Telephone number:</label>
+      <input type="tel" name="phone" required />
+    </div>
+    <div>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" required />
+    </div>
   </div>
   <div>
-    <label for="surname">Surname:</label>
-    <input type="text" name="surname" required />
+    <div>
+      <label for="gender">Gender:</label>
+      <select name="gender" id="gender">
+        <option value="female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Other">Both/other</option>
+      </select>
+    </div>
+    <div>
+      <label for="some">Add your personal Instagram/LinkedIn og other social media:</label>
+      <input type="url" id="some" name="some" />
+    </div>
+    <textarea>Short bio. Tell us about yourself..</textarea>
+
+    <div class="button"><a href="/login"><Button2 buttontext="Apply" /></a></div>
   </div>
-  <div>
-    <label for="address">Address:</label>
-    <input type="text" name="address" required />
-  </div>
-  <div>
-    <label for="mail">Mail:</label>
-    <input type="email" name="mail" required />
-  </div>
-  <div>
-    <label for="phone">Telephone number:</label>
-    <input type="tel" name="phone" required />
-  </div>
-  <div>
-    <label for="birthday">Birthday:</label>
-    <input type="date" id="birthday" name="birthday" required />
-  </div>
-  <div class="button"><a href="/login"><Button2 buttontext="Sign Up" /></a></div>
 </form>
 <script>
   const url = "";
@@ -56,3 +74,42 @@ import Button2 from "../components/Button2.astro";
     form.reset();
   }
 </script>
+
+<style>
+  #signup-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  #signup-form .button {
+    text-align: center;
+    margin: 2rem;
+  }
+  input {
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="gender"],
+  input[type="email"],
+  input[type="url"],
+  select[name="gender"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    gap: 10%;
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+  }
+</style>

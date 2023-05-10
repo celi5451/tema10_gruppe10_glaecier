@@ -2,7 +2,7 @@
 import Button2 from "../components/Button2.astro";
 ---
 
-<form id="Log-in">
+<form id="login-form">
   <div>
     <label for="name">Username</label>
     <input type="text" name="name" />
@@ -13,3 +13,23 @@ import Button2 from "../components/Button2.astro";
   </div>
   <div class="button"><a href="/login"><Button2 buttontext="Log in" /></a></div>
 </form>
+
+<style>
+  #login-form {
+    margin: 2rem;
+  }
+  #login-form .button {
+    text-align: center;
+    margin: 2rem;
+  }
+  input {
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+</style>

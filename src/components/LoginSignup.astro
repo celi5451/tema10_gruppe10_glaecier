@@ -9,32 +9,35 @@ import Signupform from "../components/Signupform.astro";
   <div class="text-box">
     <h2>Login for members</h2>
     <p>Welcome to the Glaecier Sauna membership login page! As a member, you will have exclusive access to our event calendar, receive news and practical updates.</p>
-    <p>Login now to stay informed and make the most of your membership.</p>
+    <p>Log in now to stay informed and make the most of your membership.</p>
     <Loginform />
   </div>
 </section>
 <section class="text_columns">
   <div class="col2_text">
-    <p>Not a member?</p>
+    <p class="center">Not a member?</p>
     <p>Apply for a membership below, and begin looking forward to unwind, relax and rejuvenate in our sauna & bathing club</p>
   </div>
 </section>
 <section id="signup">
-  <div>
+  <div class="text-box">
     <h2>Sign up for a Glaecier Membership</h2>
     <p>
-      Membership grants you exclusive access to our premium facilities, ensuring a serene and intimate environment for your relaxation. Escape the hustle and bustle of daily life and enjoy the privacy and tranquility that only our club can offer.
+      Membership grants you exclusive access to our premium facilities, ensuring a serene and intimate environment for your relaxation.Please note that membership spots are limited, ensuring an intimate and exceptional experience for all our members.
     </p>
-    <p>Please note that membership spots are limited, ensuring an intimate and exceptional experience for all our members. Don't miss out on the opportunity to join our exclusive Glacier Bathing and Sauna Club.</p>
-  </div><Signupform />
+    <Signupform />
+  </div>
 </section>
+
 <style>
   #login,
   #signup {
     background-color: var(--background);
+    min-height: 800px;
+  }
+  #login {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 800px;
   }
   #login img {
     height: 800px;
@@ -42,16 +45,23 @@ import Signupform from "../components/Signupform.astro";
     overflow: hidden;
   }
   .text-box {
-    margin: 3rem;
+    margin: 5rem;
   }
-  #login p,
+  #login p {
+    font-size: var(--p-font-size);
+    margin-top: 2rem;
+  }
   #signup p {
     font-size: var(--p-font-size);
     margin-top: 2rem;
   }
-  #login h2,
-  #signup h2 {
+  #login h2 {
     font-size: var(--h2-font-size);
     text-align: center;
+  }
+  #text-box h2 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-top: 5rem;
   }
 </style>

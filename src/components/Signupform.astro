@@ -1,0 +1,58 @@
+---
+import Button2 from "../components/Button2.astro";
+---
+
+<form id="signup-form">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" name="name" required />
+  </div>
+  <div>
+    <label for="surname">Surname:</label>
+    <input type="text" name="surname" required />
+  </div>
+  <div>
+    <label for="address">Address:</label>
+    <input type="text" name="address" required />
+  </div>
+  <div>
+    <label for="mail">Mail:</label>
+    <input type="email" name="mail" required />
+  </div>
+  <div>
+    <label for="phone">Telephone number:</label>
+    <input type="tel" name="phone" required />
+  </div>
+  <div>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday" required />
+  </div>
+  <div class="button"><a href="/login"><Button2 buttontext="Sign Up" /></a></div>
+</form>
+<script>
+  const url = "";
+  const key = "";
+  const form = document.querySelector("#signup-form");
+  form.addEventListener("submit", sendForm);
+
+  function sendForm(event) {
+    event.preventDefault();
+    const formData = form.elements;
+    let name = formData.name.value;
+    let mail = formData.mail.value;
+
+    console.log(formData.name.value);
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        apikey: key,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, mail }),
+    });
+
+    form.reset();
+  }
+</script>

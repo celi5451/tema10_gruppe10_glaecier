@@ -1,0 +1,27 @@
+---
+import Image from "astro/components/Image.astro";
+import Button from "./Button.astro";
+const { data } = Astro.props;
+console.log(data);
+---
+
+<article class="product_element">
+  <img src={`img/${data.image}`} alt="" />
+  <h3>{data.title}</h3>
+  <p>{data.price}</p>
+  <Button link={/products/ + data.slug} buttontext="Read more" />
+</article>
+
+<style>
+  .product_element {
+    margin: 1rem;
+    text-align: left;
+    background-color: var(--background);
+  }
+
+  img {
+    width: 300px; /* set a fixed width */
+    height: 300px; /* set a fixed height */
+    object-fit: cover; /* preserve aspect ratio and fill container */
+  }
+</style>

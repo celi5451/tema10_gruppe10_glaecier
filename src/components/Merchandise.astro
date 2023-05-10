@@ -1,0 +1,63 @@
+---
+import "../styles.css";
+const data = await fetch("https://vsifjfrjbfjhmagccafu.supabase.co/rest/v1/glaecier", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzaWZqZnJqYmZqaG1hZ2NjYWZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM3MjcxNzAsImV4cCI6MTk5OTMwMzE3MH0.2Dd5asYseh-B0iBvoe91fNO_zb5xJC0_K04lT0qxp00",
+  },
+}).then((res) => res.json());
+console.log(data);
+const { title } = Astro.props;
+import Card from "../components/Card.astro";
+---
+
+<section class="merchandise">
+  <div class="text-box">
+    <h2>Merchandise</h2>
+    <p>Immerse yourself in the world of Glaecier Bathing and Sauna Culture with our exquisite Glaecier Merchandise Collection. Each product is meticulously crafted to enhance your comfort & style.</p>
+    <p>Grab your favorite items today and make every sauna session and glacier bath a memorable one!</p>
+  </div>
+  <section class="product_grid">
+    {
+      data.map((product) => {
+        return <Card data={product} />;
+      })
+    }
+  </section>
+</section>
+
+<style>
+  .merchandise {
+    height: 800px;
+  }
+  .merchandise img {
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .text-box {
+    background-color: var(--background);
+    padding: 3rem;
+  }
+  .merchandise p {
+    font-size: var(--p-font-size);
+    margin-top: 2rem;
+  }
+  .merchandise h2 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+  }
+  .product_element {
+    margin: 1rem;
+    text-align: left;
+  }
+  .product_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+  img {
+    width: 300px; /* set a fixed width */
+    height: 300px; /* set a fixed height */
+    object-fit: cover; /* preserve aspect ratio and fill container */
+  }
+</style>

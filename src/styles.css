@@ -1,13 +1,16 @@
 :root {
-  --h1-font-size: 12rem;
-  --h2-font-size: 5rem;
-  --h3-font-size: 0.5rem bold;
-  --p-font-size: 0.5rem;
+  --h1-font-size: 4rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1.5rem;
+  --p-font-size: 1.5rem;
 
   /*Farver*/
   --white: #fff;
   --dark: #000;
-  --background: #ddcece;
+  --background: #e0dbd1;
+  --dark-background: #b1a48d;
+  --blue: #badae8;
   --hover: ;
 }
 * {
@@ -24,39 +27,18 @@ a {
   font-family: ;
 }
 
-a:hover {
-  color: var(--hover);
-  transition: 100ms all ease-in;
+img {
+  width: 100%;
 }
-
-h1 {
-  font-size: var(--h1-font-size);
+.text_columns {
+  background-color: var(--dark-background);
 }
-h2 {
-  font-size: var(--h2-font-size);
-  color: var(--black);
+.text_columns p {
+  font-size: 2rem;
+  margin: 3rem;
+  color: var(--white);
 }
-h3 {
-  font-family: ;
-  font-size: var(--h3-font-size);
-  color: var(--black);
-}
-
-h4 {
-  font-family: Calibre-bold;
-  font-size: var(--p-font-size);
-  color: var(--black);
-  margin-bottom: 0;
-}
-
-p {
-  font-family: Calibre;
-  font-size: var(--p-font-size);
-  color: var(--black);
-}
-
-.p-italic {
-  font-family: Calibre-italic;
-  font-size: var(--p-font-size);
-  color: var(--black);
+.col2_text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

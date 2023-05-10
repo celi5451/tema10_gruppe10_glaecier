@@ -1,0 +1,45 @@
+---
+import "../styles.css";
+import Button2 from "./Button2.astro";
+---
+
+<section class="membership">
+  <img src="/img/membership.webp" alt="membership-billede" />
+  <div class="text-box">
+    <h2>Membership</h2>
+    <p>Apply for membership by signing up in our online "Lobby". It is both free and non-binding.</p>
+    <div class="button"><a href="/login"><Button2 buttontext="Sign up" /></a></div>
+</div>
+</section>
+<section class="text_columns">
+  <div class="col2_text">
+    <p>The Lobby is not a waiting list, and allocation of memberships is done through a random selection based on our diversity criteria.</p>
+    <p>We aim for a diverse representation of our society in our bath club, believing that it contributes to an inclusive and open community. A Glaecier membership provides access to our facilities during opening hours.</p>
+  </div>
+</section>
+
+<style>
+  .membership {
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 800px;
+  }
+  .membership img {
+    height: 800px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .text-box {
+    margin: 3rem;
+  }
+  .membership p {
+    font-size: var(--p-font-size);
+    margin-top: 2rem;
+  }
+  .membership h2 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+  }
+  
+</style>

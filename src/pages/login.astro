@@ -1,0 +1,17 @@
+---
+import Mainlayout from "../layouts/Mainlayout.astro";
+import "../styles.css";
+import LoginSignup from "../components/LoginSignup.astro";
+
+const { title } = Astro.props;
+---
+
+<Mainlayout title="glaecier">
+  <LoginSignup />
+</Mainlayout>
+
+<style>
+  body {
+    background-color: var(--dark-background);
+  }
+</style>

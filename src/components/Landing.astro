@@ -2,28 +2,31 @@
 import Header from "../components/Header.astro";
 const { title } = Astro.props;
 import Button from "../components/Button.astro";
+import "../styles.css";
 ---
 
 <section class="landingpage">
-  <h2 class="uppercase">Breathe out. Dive in</h2>
+  <h1 class="uppercase">Breathe out Dive in</h1>
   <p>Enjoy relaxation and wellness in our new luxurious sauna- & winterbathing club at Refshaleøen</p>
-  <div class="button"><Button /></div>
+  <div class="button"><a href="/login"><Button buttontext="Sign up" /></a></div>
+  <section class="text_columns">
+    <div class="col2_text">
+      <p>Enjoy life at Glaecier - where exclusivity meets community in a spectacular setting on Refshaleøen</p>
+      <p>As a member of Glaecier, you experience a paradisiacal sanctuary in the heart of Copenhagen.</p>
+    </div>
+  </section>
 </section>
-<section class="text_columns">
-  <div class="col2_text">
-    <p>Enjoy life at Glaecier - where exclusivity meets community in a spectacular setting on Refshaleøen</p>
-    <p>As a member of Glaecier, you experience a paradisiacal sanctuary in the heart of Copenhagen.</p>
-  </div>
-</section>
+
 <style>
   .landingpage {
-    height: 600px;
+    height: 700px;
+    padding-top: 8rem;
   }
-  .landingpage h2 {
+  .landingpage h1 {
     text-align: left;
     color: var(--white);
     max-width: 500px;
-    font-size: 3.5rem;
+    font-size: var(--h1-font-size);
     margin-left: 7rem;
     margin-top: 5rem;
   }
@@ -34,23 +37,17 @@ import Button from "../components/Button.astro";
     font-size: 1.5rem;
     margin-left: 7rem;
     margin-top: 2rem;
+    line-height: 1.5;
   }
   .uppercase {
     text-transform: uppercase;
   }
   .button {
     margin-left: 7rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
   }
   .text_columns {
-    background-color: var(--white);
-  }
-  .text_columns p {
-    font-size: 2rem;
-    margin: 3rem;
-  }
-  .col2_text {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    background-color: var(--blue);
   }
 </style>

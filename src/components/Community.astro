@@ -1,0 +1,40 @@
+---
+import "../styles.css";
+---
+
+<section class="about">
+  <div class="text-box">
+    <h2>Community</h2>
+    <p>
+      The social community is the cornerstone of Glaecier. A community with room for diversity, inclusivity, and good conversation. We aim to create a place where people can meet and build relationships in an informal way. A place where thoughts,
+      ideas, and feelings can be shared. In addition to casual member encounters, we also host various events and Gus gatherings, all designed to build relationships among members. Therefore, the social element is a crucial part of being a Glaecier
+      member.
+    </p>
+  </div>
+  <img src="/img/community.webp" alt="about-billede" />
+</section>
+
+<style>
+  .about {
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 800px;
+  }
+  .about img {
+    height: 800px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .text-box {
+    margin: 3rem;
+  }
+  .about p {
+    font-size: var(--p-font-size);
+    margin-top: 2rem;
+  }
+  .about h2 {
+    font-size: var(--h2-font-size);
+    text-align: center;
+  }
+</style>

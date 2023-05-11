@@ -13,6 +13,7 @@
   --grey-background: #e9e8ef;
   --blue: #badae8;
   --orange-beige: #d9a87e;
+  --ocean-blue: #1c5c6b;
   --hover: ;
 }
 * {
@@ -34,15 +35,41 @@ img {
 .text_columns {
   background-color: var(--dark-background);
 }
+.text-box {
+  margin: 4rem;
+}
+p {
+  font-size: var(--p-font-size);
+  margin-top: 2rem;
+}
+h2 {
+  font-size: var(--h2-font-size);
+  text-align: center;
+}
+h3 {
+  font-size: var(--h3-font-size);
+  text-align: center;
+  margin-top: 2rem;
+}
+h4 {
+  font-size: var(--h4-font-size);
+  text-align: center;
+  margin-top: 0.5rem;
+}
 .text_columns p {
-  font-size: 2rem;
-  margin: 3rem;
+  font-size: 1.5rem;
+  margin: 4rem;
   color: var(--white);
 }
+
 .col2_text {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 .center {
   text-align: center;
+}
+.uppercase {
+  text-transform: uppercase;
 }

@@ -2,49 +2,51 @@
 ---
 
 <header>
-  <div class="flex">
-    <div class="logo">
-      <a href="/">
-        <img src="img/glaecier_logo.svg" alt="logo" />
-      </a>
-    </div>
-    <nav>
-      <ul class="nav-list">
-        <li><a href="/#about_section">About</a></li>
-        <li><a href="/#membership_section">Membership</a></li>
-        <li><a href="/#community_section">Community</a></li>
-        <li><a href="/#events_section">Events</a></li>
-        <li><a href="/#merchandise_section">Merchandise</a></li>
-        <li><a href="/login">Account</a></li>
-      </ul>
-    </nav>
+  <div class="logo">
+    <a href="/">
+      <img src="img/glaecier_logo.svg" alt="logo" />
+    </a>
   </div>
+  <nav class="flex">
+    <ul class="nav-list">
+      <li><a href="/#about_section">About</a></li>
+      <li><a href="/#membership_section">Membership</a></li>
+      <li><a href="/#community_section">Community</a></li>
+      <li><a href="/#events_section">Events</a></li>
+      <li><a href="/#merchandise_section">Merchandise</a></li>
+      <li><a href="/login">Account</a></li>
+    </ul>
+  </nav>
 </header>
 
 <style>
+  .logo img {
+    width: 100%;
+    margin-left: 10%;
+    max-width: 200px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: 100%;
+    padding: 3%;
+    margin-right: 5%;
+  }
   .flex {
     display: flex;
     color: var(--white);
-    max-width: 100%;
-    padding: 2rem;
-    margin-right: 5%;
-    margin-top: 1%;
   }
 
   .nav-list {
     display: flex;
-    width: 100%;
     list-style: none;
     gap: 1rem;
+    margin: 5%;
   }
-  .logo img {
-    max-width: 15%;
-    margin-left: 10%;
-  }
-
   .nav-list li a {
     color: var(--white);
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
   }
   .nav-list li a:hover {
     border-bottom: solid 1px var(--white);

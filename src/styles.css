@@ -36,7 +36,8 @@ img {
   background-color: var(--dark-background);
 }
 .text-box {
-  margin: 4rem;
+  padding: 4rem;
+  vertical-align: center;
 }
 p {
   font-size: var(--p-font-size);
@@ -61,7 +62,6 @@ h4 {
   margin: 4rem;
   color: var(--white);
 }
-
 .col2_text {
   display: grid;
   grid-template-columns: 1fr 1fr;

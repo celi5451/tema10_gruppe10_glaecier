@@ -10,6 +10,7 @@
   --dark: #000;
   --background: #e0dbd1;
   --dark-background: #b1a48d;
+  --grey-background: #e9e8ef;
   --blue: #badae8;
   --orange-beige: #d9a87e;
   --hover: ;
@@ -17,6 +18,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+body {
+  background-repeat: no-repeat;
 }
 
 html {

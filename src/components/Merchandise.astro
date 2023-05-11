@@ -28,11 +28,10 @@ import Card from "../components/Card.astro";
 
 <style>
   .merchandise {
-    height: 800px;
+    min-height: 800px;
   }
   .merchandise img {
     object-fit: cover;
-    overflow: hidden;
   }
   .text-box {
     background-color: var(--background);
@@ -52,12 +51,7 @@ import Card from "../components/Card.astro";
   }
   .product_grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
-  }
-  img {
-    width: 300px; /* set a fixed width */
-    height: 300px; /* set a fixed height */
-    object-fit: cover; /* preserve aspect ratio and fill container */
   }
 </style>

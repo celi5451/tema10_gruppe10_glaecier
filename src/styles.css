@@ -73,3 +73,22 @@ h4 {
 .uppercase {
   text-transform: uppercase;
 }
+
+span {
+  border-bottom: dotted 1px var(--white);
+}
+.special_col2_text p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: var(--white);
+}
+.special_col2_text {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.special_col2_text > :first-child {
+  margin-top: 4rem;
+}
+.special_col2_text > :last-child {
+  margin-bottom: 4rem;
+}

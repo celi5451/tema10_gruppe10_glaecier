@@ -5,13 +5,25 @@ const { title } = Astro.props;
 ---
 
 <Mainlayout title="glaecier">
-  <div class="flex">
+  <div class="memberpage_landing">
     <img src="img/glaecier_logo.svg" alt="logo" />
-    <h1>Member</h1>
+    <h1>Welcome to our exclusive member site</h1>
   </div>
   <div class="text_columns">
     <div class="col2_text">
-      <p>Welcome to Glaecier’s exclusive member site</p>
+      <div class="special_col2_text">
+        <p>Opening hours</p>
+        <div class="col2_text">
+          <div>
+            <p>Monday - Sunday:</p>
+            <p>6:00 AM - 10:00 PM</p>
+          </div>
+          <div>
+            <p>Thursday:</p>
+            <p>6:00 AM - <span>5:00 PM</span></p>
+          </div>
+        </div>
+      </div>
       <p>Access our event calendar, insider facility tips, and practical messages. Be a part of the Glaecier community.</p>
     </div>
   </div>
@@ -35,14 +47,32 @@ const { title } = Astro.props;
     background-origin: top;
     max-height: 800px;
   }
-  img {
-    width: 300px;
+  .memberpage_landing img {
+    width: 100%;
+    max-width: 300px;
+    color: var(--white);
+    margin-left: 65%;
+    margin-top: 22rem;
   }
+  .memberpage_landing {
+    min-height: 700px;
+    color: var(--white);
+  }
+  .memberpage_landing h1 {
+    text-align: left;
+    color: var(--white);
+    max-width: 700px;
+    font-size: var(--h3-font-size);
+    margin-left: 50%;
+    margin-top: 2rem;
+  }
+
   .flex {
     display: flex;
     margin-left: 50%;
     margin-top: 30%;
     color: var(--white);
+    flex-direction: row;
   }
   .flex h1 {
     margin: 4rem;

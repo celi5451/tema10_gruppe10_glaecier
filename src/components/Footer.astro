@@ -1,27 +1,65 @@
 ---
+import "../styles.css";
 ---
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-      <p>123 Main Street, City, State ZIP Code</p>
-      <p>Phone: (123) 456-7890 | Email: info@yourcompany.com</p>
-      <p>Website: www.yourcompany.com</p>
+  <div class="footer-billede">
+    <img src="img/glaecier_tegning.svg" alt="tegning" />
+  </div>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <a href="/">
+        <img src="img/glaecier_logo.svg" alt="logo" />
+      </a>
+
+      <p>&copy; 2023 Glaecier. All rights reserved.</p>
+      <p>
+        <a href="https://www.google.com/maps/place/Refshalevej+143,+1432+København+K/@55.6904282,12.6068237,17z/data=!3m1!4b1!4m6!3m5!1s0x465253e4a1121075:0xd76336c1f6394519!8m2!3d55.6904282!4d12.6068237!16s%2Fg%2F11smjbx2sn" target="_blank"
+          >Refshalevej 143, 1432 København K</a
+        >
+      </p>
+      <p>Email:<a href="mailto:community@glaecier.com">community@glaecier.com</a></p>
+      <p>
+        Website:
+        <a href="https://www.glaecier.com" target="_blank">glaecier.com</a> |
+        <a href="https://glaecier-eksamen.netlify.app" target="_blank"> glaecier-eksamen.netlify.app</a>
+      </p>
     </div>
   </div>
+
+  <style>
+    .footer-billede {
+      max-width: 100%;
+    }
+    .footer {
+      background-color: var(--dark-background);
+      padding: 20px;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    .footer-content {
+      margin: 2rem;
+      justify-content: center;
+    }
+    .footer-content p {
+      margin: 10px 0;
+      font-size: 14px;
+      color: var(--white);
+    }
+    .footer-content a {
+      margin: 10px 0;
+      font-size: 14px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer-content a:hover {
+      border-bottom: 1px solid var(--white);
+    }
+    .footer-logo {
+      width: 100%;
+      max-width: 200px;
+    }
+  </style>
 </footer>
-
-<style>
-  .footer {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .footer-content p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #555;
-  }
-</style>

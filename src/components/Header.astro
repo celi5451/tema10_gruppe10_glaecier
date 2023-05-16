@@ -2,19 +2,23 @@
 ---
 
 <header>
-  <div class="logo">
-    <a href="/">
-      <img src="img/glaecier_logo.svg" alt="logo" />
-    </a>
-  </div>
   <nav class="flex">
+    <div class="logo">
+      <a href="/">
+        <img src="img/glaecier_logo.svg" alt="logo" />
+      </a>
+    </div>
+    <button class="toggle-btn">
+      <span class="hamburger"></span>
+    </button>
     <ul class="nav-list">
-      <li><a href="/#about_section">About</a></li>
-      <li><a href="/#membership_section">Membership</a></li>
-      <li><a href="/#community_section">Community</a></li>
-      <li><a href="/#events_section">Events</a></li>
-      <li><a href="/#merchandise_section">Merchandise</a></li>
-      <li><a href="/login">Account</a></li>
+      <li><a class="nav-link" href="/#about_section">About</a></li>
+      <li><a class="nav-link" href="/#membership_section">Membership</a></li>
+      <li><a class="nav-link" href="/#community_section">Community</a></li>
+      <li><a class="nav-link" href="/#events_section">Events</a></li>
+      <li><a class="nav-link" href="/#merchandise_section">Merchandise</a></li>
+      <li><a class="nav-link" href="/login">Account</a></li>
+      <li><a class="nav-link" href="/#faq">FAQ</a></li>
     </ul>
   </nav>
 </header>
@@ -51,4 +55,104 @@
   .nav-list li a:hover {
     border-bottom: solid 1px var(--white);
   }
+
+  /* burgermenu */
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    display: none; /* Skjul knappen som standard */
+  }
+
+  @media (max-width: 810px) {
+    .toggle-btn {
+      display: block; /* Vis knappen, når viewporten maksimalt er 600px */
+    }
+
+    .nav-links {
+      display: contents; /* Fjern ".main-menu"-boksen fra ligningen, når viewporten maksimalt er 600px, men behold børnene, så disse deltager i flex-kontekten */
+    }
+
+    .nav-links {
+      display: none; /* Fjern menu-listen som standard */
+    }
+
+    .nav-links.shown {
+      /* Vis menu-listen, når klassen ".shown" er til stede */
+      border-top: 3px solid var(--hvid-tekst-farve);
+      padding-top: 2rem;
+      margin-top: 2rem;
+      display: flex;
+      flex: 1 1 100%;
+      flex-flow: column;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburger,
+  .hamburger::before {
+    width: 2em;
+    height: 4px;
+    background: var(--hvid-tekst-farve);
+    transition: transform 0.7s cubic-bezier(0, 0.01, 0.24, 1);
+  }
+
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .hamburger::before {
+    bottom: 8px;
+  }
+
+  .pressed .hamburger {
+    transform: rotate(-45deg);
+  }
+
+  .pressed .hamburger::before {
+    /* opacity: 0; */
+    transform: rotate(90deg) translate(8px);
+  }
 </style>
+<script>
+  // Lav variablen "btn", der henviser til ".toggle-btn"
+  const btn = document.querySelector(".toggle-btn");
+  // Lav variablen "menu", der henviser til ".nav-links"
+  const menu = document.querySelector(".nav-links");
+
+  // Lav funktionen "toggleMenu()" med følgende funktionalitet
+  function toggleMenu() {
+    // a) toggle klassen "shown" på menu vha. classList.toggle
+
+    menu.classList.toggle("shown");
+    btn.classList.toggle("pressed");
+
+    // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
+    const menuShown = menu.classList.contains("shown");
+
+    // c) spørg om "menuShown" i if-sætningen nedenfor (=> if (menuShown)), og udskift teksten
+    if (menuShown) {
+      console.log(menuShown); // se i konsollen
+      // btn.textContent = "Luk"; //hvis menuShown er "true"
+    } else {
+      console.log(menuShown); // se i konsollen
+
+      // btn.textContent = "Menu"; // hvis menuShown er "false"
+    }
+    // "toggleMenu()" slutter her
+  }
+  // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
+  btn.addEventListener("click", toggleMenu);
+</script>

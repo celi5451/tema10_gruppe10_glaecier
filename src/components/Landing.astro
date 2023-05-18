@@ -35,21 +35,16 @@ import "../styles.css";
 
   <style>
     .landingpage {
-      height: 700px;
+      height: 100%;
       padding-top: 8rem;
     }
     .landingpage h1 {
-      text-align: left;
       color: var(--white);
-      max-width: 500px;
       font-size: var(--h1-font-size);
-      margin-left: 7rem;
-      margin-top: 5rem;
     }
     .landingpage p {
-      font-size: 1.5rem;
+      font-size: var(--p-font-size);
       color: var(--white);
-      margin-left: 7rem;
       max-width: 500px;
     }
     .col2_text {
@@ -70,6 +65,51 @@ import "../styles.css";
     }
     a:hover {
       border-bottom: solid 1px var(--white);
+    }
+    @media (max-width: 500px) {
+      .landingpage h1 {
+        text-align: center;
+        margin: 5rem;
+        margin-top: 5rem;
+      }
+      .landingpage p {
+        font-size: var(--p-font-size);
+        margin: 5rem;
+      }
+    }
+    @media (max-width: 899px) {
+      .landingpage {
+        justify-content: center;
+      }
+      .landingpage h1 {
+        margin: 7rem;
+        max-width: 500px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      .landingpage p {
+        margin: 7rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .landingpage {
+        max-height: 700px;
+        padding-top: 8rem;
+      }
+      .landingpage h1 {
+        text-align: left;
+        max-width: 500px;
+        margin-left: 7rem;
+        margin-top: 5rem;
+      }
+      .landingpage p {
+        font-size: var(--p-font-size);
+        margin-left: 7rem;
+        max-width: 500px;
+      }
     }
   </style>
 </section>

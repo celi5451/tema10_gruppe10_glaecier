@@ -22,6 +22,7 @@
 }
 body {
   background-repeat: no-repeat;
+  max-width: 100%;
 }
 
 html {

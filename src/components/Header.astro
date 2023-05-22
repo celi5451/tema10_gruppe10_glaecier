@@ -3,11 +3,9 @@
 
 <header>
   <nav class="flex">
-    <div class="logo">
-      <a href="/">
-        <img src="/img/glaecier_logo.svg" alt="logo" />
-      </a>
-    </div>
+    <a href="/" class="logo">
+      <img src="/img/glaecier_logo.svg" alt="logo" />
+    </a>
     <div class="hamburger">
       <span class="line"></span>
       <span class="line"></span>
@@ -35,27 +33,27 @@
     transform: scale(1.4); /* Apply scaling effect on hover */
   }
   header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100%;
-    padding: 3%;
-    margin-right: 5%;
-  }
-  .flex {
-    display: flex;
-    display: block;
-    color: var(--white);
+    top: 0;
+    width: 100%;
+    width: 100%;
+    margin-bottom: 5%;
   }
   .logo img {
     width: 100%;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-top: 5%;
     max-width: 200px;
+    position: relative;
   }
   .nav-list {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     list-style: none;
     gap: 1rem;
-    margin: 5%;
+    height: 100%;
+    margin-top: -40px;
+    margin-right: 5%;
   }
   .nav-list li a {
     color: var(--white);
@@ -71,8 +69,8 @@
     cursor: pointer;
     display: none; /* Skjuler knappen som standard */
     position: fixed;
-    margin-left: 85%;
-    margin-top: -5%;
+    margin-top: -50px;
+    margin-left: 83%;
   }
   .hamburger .line {
     display: block;

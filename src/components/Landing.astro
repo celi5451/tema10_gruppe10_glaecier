@@ -5,7 +5,7 @@ import Button from "../components/Button.astro";
 import "../styles.css";
 ---
 
-<section class="landingpage">
+<section id="landingpage_section">
   <h1 class="uppercase">Breathe out Dive in</h1>
   <p>Enjoy relaxation and wellness in our new luxurious sauna- & winterbathing club at Refshaleøen</p>
   <div class="button"><Button buttontext="Sign up" /></div>
@@ -17,109 +17,59 @@ import "../styles.css";
       target="_blank">Refshalevej 143, 1432 København K</a
     >
   </p>
-  <div class="special_col2_text">
-    <p>Opening hours</p>
-    <div class="col2_text">
-      <div>
-        <p>Monday - Sunday:</p>
-        <p>6:00 AM - 10:00 PM</p>
-      </div>
-      <div>
-        <p>Thursday:</p>
-        <p>6:00 AM - <span>5:00 PM</span></p>
-      </div>
-    </div>
-  </div>
+  <div></div>
 </section>
-<section class="text_columns">
-  <div class="col2_text"></div>
 
-  <style>
-    body {
-      min-width: 100%;
-      max-height: 100%;
-      background-image: url("../img/background.webp");
-      background-size: fill;
-      background-position: left;
-      background-origin: top;
-    }
-    .landingpage {
-      height: 100%;
-      padding-top: 8rem;
-    }
-    .landingpage h1 {
-      color: var(--white);
-      font-size: var(--h1-font-size);
-    }
-    .landingpage p {
-      font-size: var(--p-font-size);
-      color: var(--white);
+<style>
+  body {
+    background-image: url("../img/resized-background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+  }
+  #landingpage_section h1 {
+    font-size: var(--h1-font-size);
+    text-align: left;
+    margin-top: 5rem;
+  }
+  #landingpage_section p {
+    font-size: var(--p-font-size);
+    max-width: 500px;
+  }
+  .button {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  a {
+    color: var(--white);
+    font-size: var(--p-font-size);
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom: solid 1px var(--white);
+  }
+  #landingpage_section {
+    margin: 5rem;
+    max-width: 250px;
+    color: var(--white);
+  }
+  /*responsiv til ipad air*/
+  @media (min-width: 550px) {
+    #landingpage_section,
+    .button {
+      text-align: left;
       max-width: 500px;
     }
-
-    .button {
-      margin-left: 7rem;
-      margin-top: 3rem;
-      margin-bottom: 8rem;
+  }
+  /*responsiv til macbook*/
+  @media (min-width: 820px) {
+    #landingpage_section {
+      padding-top: 4rem;
+      margin-left: 10%;
+      max-width: 500px;
     }
-
-    a {
-      color: var(--white);
-      font-size: var(--p-font-size);
-      text-decoration: none;
-    }
-    a:hover {
-      border-bottom: solid 1px var(--white);
-    }
-    /*responsiv til iphone 12 pro*/
-    @media (max-width: 390px) {
-      .landingpage h1 {
-        text-align: center;
-        margin: 5rem;
-        margin-top: 5rem;
-      }
-      .landingpage p {
-        font-size: var(--p-font-size);
-        margin: 5rem;
-      }
-    }
-    /*responsiv til ipad air*/
-    @media (max-width: 819px) {
-      .landingpage {
-        justify-content: center;
-      }
-      .landingpage h1 {
-        margin: 7rem;
-        max-width: 500px;
-        margin-top: 0;
-        margin-bottom: 1rem;
-      }
-      .landingpage p {
-        margin: 7rem;
-        margin-top: 0;
-        margin-bottom: 1rem;
-      }
-    }
-    /*responsiv til macbook*/
-    @media (min-width: 820px) {
-      .landingpage {
-        height: 500px;
-        padding-top: 8rem;
-      }
-      .landingpage h1 {
-        text-align: left;
-        max-width: 500px;
-        margin-left: 7rem;
-        margin-top: 5rem;
-      }
-      .landingpage p {
-        font-size: var(--p-font-size);
-        margin-left: 7rem;
-        max-width: 500px;
-      }
-    }
-  </style>
-</section>
+  }
+</style>
 
 <script>
   // Get the button element

@@ -116,12 +116,26 @@ span {
 .hide-mobilesite {
   display: none;
 }
+.blue {
+  background-color: var(--ocean-blue);
+  color: var(--white);
+}
+.beige {
+  background-color: var(--dark-background);
+  color: var(--white);
+}
+.col2 p {
+  margin-top: 0rem;
+  margin: 3rem;
+}
+
 /*Grid i mediaqueries*/
 @media (min-width: 900px) {
   .hide-mobilesite {
     display: block;
   }
-  .index_sections {
+  .index_sections,
+  .col2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -130,6 +144,4 @@ span {
     object-fit: cover;
     overflow: hidden;
   }
-}
-
 }

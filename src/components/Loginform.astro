@@ -11,7 +11,7 @@ import Button2 from "../components/Button2.astro";
     <label for="password">Password</label>
     <input type="password" name="password" />
   </div>
-  <div class="button"><a href="./memberpage"></a><Button2 buttontext="Log in" /></div>
+  <div class="button"><Button2 buttontext="Log in" /></div>
 </form>
 
 <style>
@@ -36,3 +36,17 @@ import Button2 from "../components/Button2.astro";
     background-color: var(--dark-background);
   }
 </style>
+
+<script>
+  // Get the button element
+  const button = document.querySelector(".button");
+
+  // Add a click event listener to the button
+  button.addEventListener("click", function (event) {
+    // Prevent the default behavior
+    event.preventDefault();
+
+    // Redirect to "/memberpage"
+    window.location.href = "/memberpage";
+  });
+</script>

@@ -8,7 +8,7 @@ import "../styles.css";
 <section class="landingpage">
   <h1 class="uppercase">Breathe out Dive in</h1>
   <p>Enjoy relaxation and wellness in our new luxurious sauna- & winterbathing club at Refshaleøen</p>
-  <div class="button"><a href="/login"><Button buttontext="Sign up" /></a></div>
+  <div class="button"><Button buttontext="Sign up" /></div>
 </section>
 <section class="text_columns">
   <div class="col2_text">
@@ -95,7 +95,7 @@ import "../styles.css";
         margin-bottom: 1rem;
       }
     }
-/*responsiv til macbook*/
+    /*responsiv til macbook*/
     @media (min-width: 820px) {
       .landingpage {
         max-height: 700px;
@@ -115,3 +115,17 @@ import "../styles.css";
     }
   </style>
 </section>
+
+<script>
+  // Get the button element
+  const button = document.querySelector(".button");
+
+  // Add a click event listener to the button
+  button.addEventListener("click", function (event) {
+    // Prevent the default behavior
+    event.preventDefault();
+
+    // Redirect to "/memberpage"
+    window.location.href = "/login#signup";
+  });
+</script>

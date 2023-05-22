@@ -8,7 +8,7 @@ import Button2 from "./Button2.astro";
   <div class="text-box">
     <h2>Membership</h2>
     <p>Apply for membership by signing up in our online "Lobby". It is both free and non-binding.</p>
-    <div class="button"><a href="/login#signup"><Button2 buttontext="Sign up" /></a></div>
+    <div class="button2"><Button2 buttontext="Sign up" /></div>
   </div>
 </section>
 <section class="text_columns">
@@ -38,3 +38,17 @@ import Button2 from "./Button2.astro";
     text-align: center;
   }
 </style>
+
+<script>
+  // Get the button element
+  const button = document.querySelector(".button2");
+
+  // Add a click event listener to the button
+  button.addEventListener("click", function (event) {
+    // Prevent the default behavior
+    event.preventDefault();
+
+    // Redirect to "/memberpage"
+    window.location.href = "/login#signup";
+  });
+</script>

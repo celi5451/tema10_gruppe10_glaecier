@@ -1,5 +1,4 @@
 ---
-import Hamburger from "./Hamburger.astro";
 ---
 
 <header>
@@ -21,13 +20,20 @@ import Hamburger from "./Hamburger.astro";
     <li><a class="nav-link" href="/#community_section">Community</a></li>
     <li><a class="nav-link" href="/#events_section">Events</a></li>
     <li><a class="nav-link" href="/#merchandise_section">Merchandise</a></li>
-    <li><a class="nav-link" href="/login">Account</a></li>
-    <li><a class="nav-link" href="/#faq">FAQ</a></li>
+    <li><a href="/login"><img src="./img/user.png" alt="Profile Icon" class="white-icon" /></a></li>
+    <li><a href="/faq"><img src="./img/information.png" alt="Faq Icon" class="white-icon" /></a></li>
   </ul>
 </header>
 
 <style>
   /* nav og logo */
+  .white-icon {
+    filter: invert(1);
+    width: 20px;
+  }
+  .white-icon:hover {
+    transform: scale(1.4); /* Apply scaling effect on hover */
+  }
   header {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,7 +62,7 @@ import Hamburger from "./Hamburger.astro";
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .nav-list li a:hover {
+  .nav-link:hover {
     border-bottom: solid 1px var(--white);
   }
 
@@ -160,4 +166,12 @@ import Hamburger from "./Hamburger.astro";
   }
   // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
   btn.addEventListener("click", toggleMenu);
+
+  // Scroll to the FAQ section when the link is clicked
+  const faqLink = document.querySelector('a[href="#faq"]');
+  faqLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent default link behavior
+    const faqSection = document.getElementById("faq");
+    faqSection.scrollIntoView({ behavior: "smooth" });
+  });
 </script>

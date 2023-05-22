@@ -1,0 +1,35 @@
+---
+import FaqNonmember from "../components/FaqNonmember.astro";
+import FaqMember from "../components/FaqMember.astro";
+import Mainlayout from "../layouts/Mainlayout.astro";
+import "../styles.css";
+---
+
+<Mainlayout>
+  <div id="faq_section">
+    <h2>FAQ - Frequently Asked Question</h2>
+    <section id="faq-nonmember">
+      <h3>For non-members</h3>
+      <FaqNonmember />
+    </section>
+    <section id="faq-member">
+      <h3>For members</h3>
+      <FaqMember />
+    </section>
+  </div>
+</Mainlayout>
+<style>
+  #faq_section {
+    background-color: var(--background);
+    padding: 3rem;
+  }
+  h2 {
+    text-align: center;
+  }
+  body {
+    background-color: var(--dark-background);
+  }
+  main {
+    background-color: var(--background);
+  }
+</style>

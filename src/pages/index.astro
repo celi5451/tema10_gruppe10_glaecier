@@ -6,7 +6,8 @@ import Membership from "../components/Membership.astro";
 import Community from "../components/Community.astro";
 import Events from "../components/Events.astro";
 import Merchandise from "../components/Merchandise.astro";
-import FaqNonmember from "../components/Faq-nonmember.astro";
+import BackToTop from "../components/BackToTop.astro";
+
 import "../styles.css";
 const { title } = Astro.props;
 ---
@@ -30,9 +31,7 @@ const { title } = Astro.props;
   <section id="merchandise_section">
     <Merchandise />
   </section>
-  <section id="faq">
-    <FaqNonmember />
-  </section>
+  <BackToTop />
 </Mainlayout>
 
 <style>

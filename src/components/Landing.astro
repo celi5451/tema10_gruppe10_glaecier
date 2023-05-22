@@ -34,6 +34,18 @@ import "../styles.css";
   </div>
 
   <style>
+    body {
+      min-width: 100%;
+      max-height: 100%;
+      background-image: url("../img/background.webp");
+      background-size: fill;
+      overflow: hidden;
+      background-position: left;
+      background-origin: top;
+    }
+    html {
+      height: 100%;
+    }
     .landingpage {
       height: 100%;
       padding-top: 8rem;
@@ -98,7 +110,7 @@ import "../styles.css";
     /*responsiv til macbook*/
     @media (min-width: 820px) {
       .landingpage {
-        max-height: 700px;
+        height: 500px;
         padding-top: 8rem;
       }
       .landingpage h1 {

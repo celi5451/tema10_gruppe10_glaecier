@@ -3,16 +3,19 @@ import FaqNonmember from "../components/FaqNonmember.astro";
 import FaqMember from "../components/FaqMember.astro";
 import Mainlayout from "../layouts/Mainlayout.astro";
 import "../styles.css";
+const { title } = Astro.props;
 ---
 
-<Mainlayout>
-  <div id="faq_section">
-    <h2>FAQ - Frequently Asked Question</h2>
-    <h3>For non-members</h3>
+<Mainlayout title="Glaecier">
+  <section id="faq_section">
+    <div class="section_text">
+      <h2>FAQ - Frequently Asked Question</h2>
+      <h3>For non-members</h3>
       <FaqNonmember />
-    <h3>For members</h3>
-    <FaqMember />
-  </div>
+      <h3>For members</h3>
+      <FaqMember />
+    </div>
+  </section>
 </Mainlayout>
 <style>
   #faq_section {

@@ -3,14 +3,15 @@ import "../styles.css";
 import Button2 from "./Button2.astro";
 ---
 
-<section class="membership">
-  <img src="/img/membership.webp" alt="membership-billede" />
-  <div class="text-box">
+<section id="membership_section" class="index_sections">
+  <img class="section_img" src="/img/membership.webp" alt="membership-billede" />
+  <div class="section_text">
     <h2>Membership</h2>
     <p>Apply for membership by signing up in our online "Lobby". It is both free and non-binding.</p>
     <div class="button2"><Button2 buttontext="Sign up" /></div>
   </div>
 </section>
+
 <section class="text_columns">
   <div class="col2_text">
     <p>The Lobby is not a waiting list, and allocation of memberships is done through a random selection based on our diversity criteria.</p>
@@ -19,22 +20,11 @@ import Button2 from "./Button2.astro";
 </section>
 
 <style>
-  .membership {
-    background-color: var(--background);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 800px;
+  p {
+    text-align: center;
   }
-  .membership img {
-    height: 800px;
-    object-fit: cover;
-    overflow: hidden;
-  }
-  .text-box h2 {
-    padding-top: 33%;
-  }
-  .button {
-    margin-top: 3rem;
+  .button2 {
+    margin-top: 2rem;
     text-align: center;
   }
 </style>

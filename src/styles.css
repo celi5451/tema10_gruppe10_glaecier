@@ -94,3 +94,39 @@ span {
 .special_col2_text > :last-child {
   margin-bottom: 4rem;
 }
+.index_sections {
+  background-color: var(--background);
+}
+.section_img {
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.section_text {
+  padding: 3rem;
+  vertical-align: center;
+}
+.question {
+  padding: 1rem;
+  margin: 1rem;
+}
+.hide-mobilesite {
+  display: none;
+}
+/*Grid i mediaqueries*/
+@media (min-width: 900px) {
+  .hide-mobilesite {
+    display: block;
+  }
+  .index_sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .section_img {
+    height: 700px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+}

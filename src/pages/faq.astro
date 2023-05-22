@@ -8,28 +8,27 @@ import "../styles.css";
 <Mainlayout>
   <div id="faq_section">
     <h2>FAQ - Frequently Asked Question</h2>
-    <section id="faq-nonmember">
-      <h3>For non-members</h3>
+    <h3>For non-members</h3>
       <FaqNonmember />
-    </section>
-    <section id="faq-member">
-      <h3>For members</h3>
-      <FaqMember />
-    </section>
+    <h3>For members</h3>
+    <FaqMember />
   </div>
 </Mainlayout>
 <style>
   #faq_section {
     background-color: var(--background);
-    padding: 3rem;
   }
+  /*
+  h2 {
+    margin-bottom: 0;
+  }
+  .text-box :second-child {
+    margin-top: 0;
+  }*/
   h2 {
     text-align: center;
   }
   body {
     background-color: var(--dark-background);
-  }
-  main {
-    background-color: var(--background);
   }
 </style>

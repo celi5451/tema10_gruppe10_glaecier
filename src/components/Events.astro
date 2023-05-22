@@ -2,9 +2,9 @@
 import "../styles.css";
 ---
 
-<section class="events">
-  <img src="/img/events.webp" alt="events-billede" />
-  <div class="text-box">
+<section id="events_section" class="index_sections">
+  <img class="section_img" src="/img/events.webp" alt="events-billede" />
+  <div class="section_text">
     <h2>Events</h2>
     <h3>Saunagus</h3>
     <h4>Experience the ultimate relaxation</h4>
@@ -24,17 +24,3 @@ import "../styles.css";
     <p>From the traditional Finnish Saunagus to exciting Salsaclub</p>
   </div>
 </section>
-
-<style>
-  .events {
-    background-color: var(--background);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 1000px;
-  }
-  .events img {
-    min-height: 1010px;
-    object-fit: cover;
-    overflow: hidden;
-  }
-</style>

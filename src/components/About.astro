@@ -2,8 +2,8 @@
 import "../styles.css";
 ---
 
-<section class="about">
-  <div class="text-box">
+<section id="about_section" class="index_sections">
+  <div class="section_text">
     <h2>About Glaecier</h2>
     <p>
       Glaecier is a new member-based bathing club located on Refshaleøen with the best view over Copenhagen. It's built on a large, specially designed houseboat and features a floating pool with a wooden deck and underwater areas. The sauna has the
@@ -11,19 +11,5 @@ import "../styles.css";
       exclusive winter/summer bathing conditions with a sauna and an inclusive community for members.
     </p>
   </div>
-  <img src="/img/about.webp" alt="about-billede" />
+  <img class="section_img" src="/img/about.webp" alt="about-billede" />
 </section>
-
-<style>
-  .about {
-    background-color: var(--background);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 800px;
-  }
-  .about img {
-    height: 800px;
-    object-fit: cover;
-    overflow: hidden;
-  }
-</style>

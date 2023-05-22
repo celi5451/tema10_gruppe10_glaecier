@@ -19,10 +19,10 @@
 @media (min-width: 600px) {
   :root {
     --h1-font-size: 4rem;
-    --h2-font-size: 2.5rem;
-    --h3-font-size: 2rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.5rem;
     --h4-font-size: 1.5rem;
-    --p-font-size: 1.5rem;
+    --p-font-size: 1rem;
   }
 }
 * {
@@ -50,6 +50,7 @@ p {
 }
 h1 {
   font-size: var(--h1-font-size);
+  color: var(--white);
 }
 h2 {
   font-size: var(--h2-font-size);
@@ -96,6 +97,10 @@ span {
   background-color: var(--ocean-blue);
   color: var(--white);
 }
+.orange-beige {
+  background-color: var(--orange-beige);
+  color: var(--white);
+}
 .beige {
   background-color: var(--dark-background);
   color: var(--white);
@@ -104,20 +109,21 @@ span {
   margin-top: 0rem;
   padding: 3rem;
 }
-.special_col2_text p {
-  font-size: 1.5rem;
-  margin: 1rem;
-  color: var(--white);
+.col2 .opening-hours .hours {
+  text-align: center;
 }
-.special_col2_text {
-  margin-left: 4rem;
-  margin-right: 4rem;
+.opening-hours p {
+  padding: 0.5rem;
+  text-align: center;
 }
-.special_col2_text > :first-child {
-  margin-top: 4rem;
+.hours div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
 }
-.special_col2_text > :last-child {
-  margin-bottom: 4rem;
+.opening-hours {
+  padding: 3rem;
 }
 
 /*Styling i responsiv*/

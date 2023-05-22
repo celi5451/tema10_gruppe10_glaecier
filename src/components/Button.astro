@@ -9,7 +9,7 @@ const { buttontext } = Astro.props;
   .rectangular-button {
     background-color: transparent;
     color: var(--white);
-    border: 3px solid var(--white);
+    border: 2px solid var(--white);
     padding: 12px 24px;
     border-radius: 9999px;
     font-size: 16px;
@@ -20,6 +20,7 @@ const { buttontext } = Astro.props;
   }
   .rectangular-button:hover {
     cursor: pointer;
+    transform: scale(1.1); /* Apply scaling effect on hover */
   }
   .rectangular-button a {
     text-decoration: none;

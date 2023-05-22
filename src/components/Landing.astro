@@ -1,6 +1,4 @@
 ---
-import Header from "../components/Header.astro";
-const { title } = Astro.props;
 import Button from "../components/Button.astro";
 import "../styles.css";
 ---
@@ -11,13 +9,24 @@ import "../styles.css";
   <div class="button"><Button buttontext="Sign up" /></div>
 </section>
 <section class="col2 blue">
-  <p>
+  <p class="hide-mobilesite">
     Enjoy life at Glaecier - where exclusivity meets community in a spectacular setting on Refshaleøen - <a
       href="https://www.google.com/maps/place/Refshalevej+143,+1432+København+K/@55.6904282,12.6068237,17z/data=!3m1!4b1!4m6!3m5!1s0x465253e4a1121075:0xd76336c1f6394519!8m2!3d55.6904282!4d12.6068237!16s%2Fg%2F11smjbx2sn"
       target="_blank">Refshalevej 143, 1432 København K</a
     >
   </p>
-  <div></div>
+  <div class="opening-hours">
+    <div class="hours">
+      <div>
+        <p>Monday - Sunday:</p>
+        <p>6:00 AM - 10:00 PM</p>
+      </div>
+      <div>
+        <p>Thursday:</p>
+        <p>6:00 AM - <span>5:00 PM</span></p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
@@ -25,7 +34,7 @@ import "../styles.css";
     background-image: url("../img/resized-background.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-origin: border-box;
+    background-origin: top;
   }
   #landingpage_section h1 {
     font-size: var(--h1-font-size);

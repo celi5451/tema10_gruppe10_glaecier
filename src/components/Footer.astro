@@ -3,55 +3,42 @@ import "../styles.css";
 ---
 
 <footer class="footer">
-  <div class="footer-billede">
-    <img src="./img/ocean-blue_footer.svg" alt="tegning" />
+  <div>
+    <img class="footer-billede hide-mobilesite" src="./img/ocean-blue_footer.svg" alt="tegning" />
   </div>
   <div class="footer-content">
-    <div class="footer-logo">
-      <a href="/">
-        <img src="img/glaecier_logo.svg" alt="logo" />
-      </a>
-
-      <p>
-        &copy; 2023 Glaecier. All rights reserved.
-        <a href="/faq">FAQ</a>
-      </p>
-      <p>
-        <a href="https://www.google.com/maps/place/Refshalevej+143,+1432+København+K/@55.6904282,12.6068237,17z/data=!3m1!4b1!4m6!3m5!1s0x465253e4a1121075:0xd76336c1f6394519!8m2!3d55.6904282!4d12.6068237!16s%2Fg%2F11smjbx2sn" target="_blank"
-          >Refshalevej 143, 1432 København K</a
-        >
-      </p>
-      <p>Email:<a href="mailto:community@glaecier.com">community@glaecier.com</a></p>
-      <p>
-        Website:
-        <a href="https://www.glaecier.com" target="_blank">glaecier.com</a> |
-        <a href="https://glaecier-eksamen.netlify.app" target="_blank"> glaecier-eksamen.netlify.app</a>
-      </p>
-    </div>
+    <p>
+      &copy; 2023 Glaecier. All rights reserved.
+      <a href="/faq">FAQ</a>
+    </p>
+    <p>
+      <a href="https://www.google.com/maps/place/Refshalevej+143,+1432+København+K/@55.6904282,12.6068237,17z/data=!3m1!4b1!4m6!3m5!1s0x465253e4a1121075:0xd76336c1f6394519!8m2!3d55.6904282!4d12.6068237!16s%2Fg%2F11smjbx2sn" target="_blank"
+        >Refshalevej 143, 1432 København K</a
+      >
+    </p>
+    <p>Email:<a href="mailto:community@glaecier.com">community@glaecier.com</a></p>
+    <p>
+      Website:
+      <a href="https://www.glaecier.com" target="_blank">glaecier.com</a> |
+      <a href="https://glaecier-eksamen.netlify.app" target="_blank"> glaecier-eksamen.netlify.app</a>
+    </p>
   </div>
 
   <style>
     .footer-billede {
-      max-width: 100%;
+      width: 100%;
     }
     .footer {
       background-color: var(--dark-background);
-      padding: 20px;
       text-align: center;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .footer-content {
-      margin: 2rem;
-      justify-content: center;
+      display: flex;
+      flex-direction: row;
     }
     .footer-content p {
-      margin: 10px 0;
       font-size: 14px;
       color: var(--ocean-blue);
     }
     .footer-content a {
-      margin: 10px 0;
       font-size: 14px;
       color: var(--ocean-blue);
       text-decoration: none;
@@ -62,9 +49,6 @@ import "../styles.css";
     }
     .footer-logo {
       width: 100%;
-      max-width: 200px;
-      justify-content: center;
-      margin-left: 6rem;
     }
   </style>
 </footer>

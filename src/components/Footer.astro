@@ -7,10 +7,8 @@ import "../styles.css";
     <img class="footer-billede hide-mobilesite" src="./img/ocean-blue_footer.svg" alt="tegning" />
   </div>
   <div class="footer-content">
-    <p>
-      &copy; 2023 Glaecier. All rights reserved.
-      <a href="/faq">FAQ</a>
-    </p>
+    <p>&copy; 2023 Glaecier. All rights reserved.</p>
+
     <p>
       <a href="https://www.google.com/maps/place/Refshalevej+143,+1432+København+K/@55.6904282,12.6068237,17z/data=!3m1!4b1!4m6!3m5!1s0x465253e4a1121075:0xd76336c1f6394519!8m2!3d55.6904282!4d12.6068237!16s%2Fg%2F11smjbx2sn" target="_blank"
         >Refshalevej 143, 1432 København K</a
@@ -22,33 +20,31 @@ import "../styles.css";
       <a href="https://www.glaecier.com" target="_blank">glaecier.com</a> |
       <a href="https://glaecier-eksamen.netlify.app" target="_blank"> glaecier-eksamen.netlify.app</a>
     </p>
+    <p><a href="/faq/">FAQ</a></p>
   </div>
 
   <style>
-    .footer-billede {
-      width: 100%;
-    }
     .footer {
       background-color: var(--dark-background);
-      text-align: center;
-      display: flex;
+      display: flex-end;
       flex-direction: row;
-    }
-    .footer-content p {
-      font-size: 14px;
       color: var(--ocean-blue);
+      font-size: 14px;
+      padding: 2rem;
+    }
+    .footer-billede {
+      max-width: 50%;
+    }
+    .footer-content {
+      text-align: right;
     }
     .footer-content a {
-      font-size: 14px;
-      color: var(--ocean-blue);
       text-decoration: none;
       font-weight: bold;
+      color: var(--ocean-blue);
     }
     .footer-content p a:hover {
       border-bottom: 1px solid var(--ocean-blue);
-    }
-    .footer-logo {
-      width: 100%;
     }
   </style>
 </footer>

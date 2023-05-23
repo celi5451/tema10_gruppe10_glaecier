@@ -11,7 +11,7 @@ import Button2 from "../components/Button2.astro";
     <label for="password">Password</label>
     <input type="password" name="password" />
   </div>
-  <div class="button2"><Button2 buttontext="Log in!" /></div>
+  <div class="button2"><Button2 buttontext="Log in" /></div>
 </form>
 
 <style>
@@ -47,6 +47,6 @@ import Button2 from "../components/Button2.astro";
     event.preventDefault();
 
     // Redirect to "/memberpage"
-    window.location.href = "/memberpage";
+    window.location.href = "/memberpage/";
   });
 </script>

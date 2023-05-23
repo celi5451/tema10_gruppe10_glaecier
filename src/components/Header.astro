@@ -1,5 +1,5 @@
 ---
-import HamburgerFoldOutMenu from "./HamburgerFoldOutMenu.astro";
+import "../styles.css";
 ---
 
 <header>
@@ -7,13 +7,11 @@ import HamburgerFoldOutMenu from "./HamburgerFoldOutMenu.astro";
     <a href="/" class="logo">
       <img src="/img/glaecier_logo.svg" alt="logo" />
     </a>
-    <HamburgerFoldOutMenu />
     <div class="hamburger">
       <span class="line line1"></span>
       <span class="line line2"></span>
       <span class="line line3"></span>
     </div>
-
     <ul class="nav-list">
       <li><a class="nav-link" href="/#about_section">About</a></li>
       <li><a class="nav-link" href="/#membership_section">Membership</a></li>
@@ -27,6 +25,7 @@ import HamburgerFoldOutMenu from "./HamburgerFoldOutMenu.astro";
 </header>
 
 <style>
+  /* Add your existing styles here */
   /* nav og logo */
   .white-icon {
     filter: invert(1);
@@ -38,7 +37,6 @@ import HamburgerFoldOutMenu from "./HamburgerFoldOutMenu.astro";
   header {
     top: 0;
     width: 100%;
-    width: 100%;
     margin-bottom: 4rem;
   }
   .logo img {
@@ -47,6 +45,7 @@ import HamburgerFoldOutMenu from "./HamburgerFoldOutMenu.astro";
     top: 50px;
     max-width: 200px;
     position: relative;
+    z-index: 3;
   }
   .nav-list {
     display: flex;
@@ -68,106 +67,73 @@ import HamburgerFoldOutMenu from "./HamburgerFoldOutMenu.astro";
   /* burgermenu */
   .hamburger {
     cursor: pointer;
-    display: none; /* Skjuler knappen som standard */
+    display: none;
+    /* Skjuler knappen som standard */
     position: fixed;
     top: 5%;
     right: 8%;
   }
+
   .hamburger .line {
     display: block;
     width: 40px;
     height: 3px;
     margin-bottom: 10px;
     background-color: var(--white);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .pressed .line1 {
+    transform-origin: 0% 0%;
+    transform: rotate(40deg) translate(2px, 2px);
+  }
+
+  .pressed .line2 {
+    opacity: 0;
+  }
+
+  .pressed .line3 {
+    transform-origin: 0% 100%;
+    transform: rotate(-38deg) translate(1px, -1px);
   }
 
   @media (max-width: 900px) {
     .hamburger {
       display: block;
+      z-index: 2;
+      overflow: ;
       /* Vis knappen, når viewporten maksimalt er 900px */
-    }
-    .nav-list {
-      display: contents; /* Fjern ".nav-list"-boksen fra ligningen, når viewporten maksimalt er 900px, men behold børnene, så disse deltager i flex-kontekten */
-      display: none; /* Fjern nav-listen som standard */
-      top: 10%;
     }
 
     .nav-list.shown {
-      /* Vis nav-listen, når klassen ".shown" er til stede */
-      background-color: var(--dark-background);
-      color: var(--dark-background);
-      padding: 5%;
-      display: flex;
       display: block;
-      top: 10%;
-      right: 5px;
-      flex: 1 1 100%;
-      flex-flow: column;
-      text-align: right;
-      font-size: var(--p-font-size);
+      transform: translateX(0);
       position: fixed;
+      font-size: var(--p-font-size);
+      display: flex;
+      top: 0%;
+      padding-top: 130px;
+    }
+    .nav-list {
+      display: none;
+      /* Fjern nav-listen som standard */
+      font-size: var(--h2-font-size);
       z-index: 1;
+      background-color: var(--header-background);
+      color: var(--white);
+      padding: 5%;
     }
-    .nav-list a.shown {
-      margin-right: 1rem;
-    }
   }
-
-  .pressed .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-  }
-  .pressed .line2 {
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .pressed .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-  }
-
-  /*
-  .pressed .hamburger::before {
-    transform: rotate(90deg) translate(8px);
-  }*/
-
-  /* opacity: 0; */
 </style>
+
 <script>
-  // Lav variablen "btn", der henviser til ".toggle-btn"
   const btn = document.querySelector(".hamburger");
-  // Lav variablen "menu", der henviser til ".nav-links"
   const menu = document.querySelector(".nav-list");
 
-  // Lav funktionen "toggleMenu()" med følgende funktionalitet
   function toggleMenu() {
-    // a) toggle klassen "shown" på menu vha. classList.toggle
-
     menu.classList.toggle("shown");
     btn.classList.toggle("pressed");
-
-    // b) lav variablen "menuShown", som siger, at menu-variablen indeholder klassen "shown" via classList.contains("")
-    const menuShown = menu.classList.contains("shown");
-
-    // c) spørg om "menuShown" i if-sætningen nedenfor (=> if (menuShown)), og udskift teksten
-    if (menuShown) {
-      console.log(menuShown); // se i konsollen
-      // btn.textContent = "Luk"; //hvis menuShown er "true"
-    } else {
-      console.log(menuShown); // se i konsollen
-
-      // btn.textContent = "Menu"; // hvis menuShown er "false"
-    }
-    // "toggleMenu()" slutter her
   }
-  // Tilføj et klik-event til "btn", der sætter toggleMenu-funktionen i gang
-  btn.addEventListener("click", toggleMenu);
 
-  // Scroll to the FAQ section when the link is clicked
-  /* const faqLink = document.querySelector('a[href="#faq"]');
-  faqLink.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    const faqSection = document.getElementById("faq");
-    faqSection.scrollIntoView({ behavior: "smooth" });
-  });*/
+  btn.addEventListener("click", toggleMenu);
 </script>

@@ -4,7 +4,7 @@ import "../styles.css";
 
 <footer class="footer">
   <div>
-    <img class="footer-billede hide-mobilesite" src="./img/ocean-blue_footer.svg" alt="tegning" />
+    <img class="footer-billede hide-mobilesite" src="/img/ocean-blue_footer.png" alt="tegning" />
   </div>
   <div class="footer-content">
     <p>&copy; 2023 Glaecier. All rights reserved.</p>
@@ -26,22 +26,26 @@ import "../styles.css";
   <style>
     .footer {
       background-color: var(--dark-background);
-      display: flex-end;
+      display: flex;
       flex-direction: row;
       color: var(--ocean-blue);
-      font-size: 14px;
-      padding: 2rem;
+      padding: 3rem;
     }
     .footer-billede {
-      max-width: 50%;
+      width: 100%;
     }
     .footer-content {
       text-align: right;
+      width: 100%;
+    }
+    .footer-content p {
+      font-size: 10px;
     }
     .footer-content a {
       text-decoration: none;
       font-weight: bold;
       color: var(--ocean-blue);
+      font-size: 10px;
     }
     .footer-content p a:hover {
       border-bottom: 1px solid var(--ocean-blue);

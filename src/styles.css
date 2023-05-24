@@ -77,6 +77,15 @@ span {
   border-bottom: dotted 1px var(--white);
 }
 
+
+.white-icon {
+  filter: invert(1);
+  width: 20px;
+}
+.white-icon:hover {
+  transform: scale(1.4); /* Apply scaling effect on hover */
+}
+
 /* Styling af sectionernes tekst og billeder*/
 .index_sections {
   background-color: var(--background);

@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import BackToTop from "../components/BackToTop.astro";
 const { title } = Astro.props;
 ---
 
@@ -20,6 +21,8 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
+    <BackToTop/>
+
     <Footer />
   </body>
 </html>

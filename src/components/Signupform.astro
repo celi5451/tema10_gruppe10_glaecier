@@ -27,8 +27,6 @@ import Button2 from "../components/Button2.astro";
     <label for="birthday">Birthday:</label>
     <input type="date" id="birthday" name="birthday" required />
   </div>
-</form>
-<div>
   <div>
     <label for="gender">Gender:</label>
     <select name="gender" id="gender">
@@ -43,8 +41,9 @@ import Button2 from "../components/Button2.astro";
   </div>
   <textarea name="bio">Short bio. Tell us about yourself..</textarea>
 
-  <div class="button"><a href="/login"><Button2 buttontext="Apply" /></a></div>
-</div>
+  <div class="button"><a href=""><Button2 buttontext="Apply" /></a></div>
+</form>
+
 <script>
   const url = "https://vsifjfrjbfjhmagccafu.supabase.co/rest/v1/sign-up-glaecier";
   const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzaWZqZnJqYmZqaG1hZ2NjYWZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM3MjcxNzAsImV4cCI6MTk5OTMwMzE3MH0.2Dd5asYseh-B0iBvoe91fNO_zb5xJC0_K04lT0qxp00";

@@ -8,6 +8,20 @@ import Button2 from "./Button2.astro";
   <div class="section_text">
     <h2>Membership</h2>
     <p>Apply for membership by signing up in our online "Lobby". It is both free and non-binding.</p>
+    <div class="prices">
+      <div>
+        <p class="bold">Age of 18-29:</p>
+        <p>399 DKK per month</p>
+      </div>
+      <div>
+        <p class="bold">Age of 30-64:</p>
+        <p>499 DKK per month</p>
+      </div>
+      <div>
+        <p class="bold">Age of +65:</p>
+        <p>399 DKK per month</p>
+      </div>
+    </div>
     <div class="button2"><Button2 buttontext="Sign up" /></div>
   </div>
 </section>
@@ -21,9 +35,19 @@ import Button2 from "./Button2.astro";
   #membership_section .section_text {
     text-align: center;
   }
-  
+  #membership_section .prices {
+    justify-content: center;
+  }
+
   .button2 {
     margin-top: 2rem;
+  }
+  .prices {
+    margin-top: 2rem;
+    display: flex;
+    text-align: left;
+
+    gap: 2rem;
   }
 </style>
 

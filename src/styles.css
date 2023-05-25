@@ -71,6 +71,9 @@ h4 {
 .center {
   text-align: center;
 }
+.bold {
+  font-weight: bold;
+}
 .uppercase {
   text-transform: uppercase;
 }

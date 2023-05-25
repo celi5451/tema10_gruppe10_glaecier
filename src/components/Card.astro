@@ -1,6 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
-import Button from "./Button.astro";
+import Button2 from "./Button2.astro";
 const { data } = Astro.props;
 console.log(data);
 ---
@@ -8,21 +8,22 @@ console.log(data);
 <article class="product_element">
   <img src={`img/${data.image}`} alt="" />
   <h3>{data.title}</h3>
+  <p>{data.description}</p>
+
   <p>{data.price}</p>
-  <Button link={/products/ + data.slug} buttontext="Read more" />
 </article>
 
 <style>
   .product_element {
     margin: 1rem;
+    padding: 1rem;
     text-align: left;
     background-color: var(--grey-background);
-    min-height: 500px;
   }
 
   img {
     width: 100%; /* set a fixed width */
-    height: 100%; /* set a fixed height */
+    height: auto; /* set a auto height */
     /* object-fit: cover; preserve aspect ratio and fill container */
   }
 </style>

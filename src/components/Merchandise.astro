@@ -12,11 +12,6 @@ import Card from "../components/Card.astro";
 ---
 
 <section class="merchandise">
-  <div class="text-box">
-    <h2>Merchandise</h2>
-    <p>Immerse yourself in the world of Glaecier Bathing and Sauna Culture with our exquisite Glaecier Merchandise Collection. Each product is meticulously crafted to enhance your comfort & style.</p>
-    <p>Grab your favorite items today and make every sauna session and glacier bath a memorable one!</p>
-  </div>
   <section class="product_grid">
     {
       data.map((product) => {
@@ -27,11 +22,11 @@ import Card from "../components/Card.astro";
 </section>
 
 <style>
-  .merchandise {
-    min-height: 800px;
-  }
-  .merchandise img {
+  img {
     object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
   }
   .text-box {
     background-color: var(--background);
@@ -47,13 +42,14 @@ import Card from "../components/Card.astro";
   }
   .product_element {
     margin: 1rem;
-    text-align: left;
   }
+  @media (min-width: 600px) {
+
   .product_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-  }
+  }}
   * {
     box-sizing: border-box;
   }

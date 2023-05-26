@@ -4,7 +4,7 @@ import "../styles.css";
 ---
 
 <section id="landingpage_section">
-  <h1 class="uppercase">Breathe out Dive in</h1>
+  <h1 class="uppercase landingh1">Breathe out Dive in</h1>
   <p>Enjoy relaxation and wellness in our new luxurious sauna- & winterbathing club at Refshaleøen</p>
   <div class="button"><Button buttontext="Sign up" /></div>
 </section>
@@ -36,9 +36,15 @@ import "../styles.css";
     background-size: cover;
     background-origin: top;
   }
+  @media (min-width: 600px) {
+    #landingpage_section h1 {
+      font-size: 4rem;
+    }
+  }
   #landingpage_section h1 {
-    font-size: var(--h1-font-size);
-    margin-top: 5rem;
+    color: var(--white);
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
   }
   #landingpage_section p {
     font-size: var(--p-font-size);

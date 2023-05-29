@@ -44,10 +44,18 @@ import Button2 from "./Button2.astro";
   }
   .prices {
     margin-top: 2rem;
-    display: flex;
-    text-align: left;
+    text-align: center;
 
     gap: 2rem;
+  }
+  .prices div {
+    margin-bottom: 2rem;
+  }
+  @media (min-width: 380px) {
+    .prices {
+      display: flex;
+      text-align: left;
+    }
   }
 </style>
 
